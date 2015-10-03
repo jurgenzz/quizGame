@@ -2,7 +2,7 @@
 
 var level = [
     {
-        name: 'Coctail name 1',
+        name: 'Cocktail name 1',
         ingredients: ['vodka', 'juice', 'lime wedge']
 
     },
