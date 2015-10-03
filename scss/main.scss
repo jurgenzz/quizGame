@@ -1,0 +1,188 @@
+@import "bourbon";
+$mainColor: #25252c;
+$secondColor: #cfcfd2;
+$green: #589A38;
+$greenHover: #559835;
+body {
+    background: $mainColor;
+    color: $secondColor;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-div {
+    margin: 0 auto;
+    margin-top: 15px;
+    display: block;
+    min-width:662px;
+    width: 50%;
+    text-align: center;
+    @media screen and (max-width: 500px) {
+        width: 100%;
+        min-width:0;
+    }
+    &:before {
+        display:table;
+        content: " ";
+    }
+}
+
+
+.btn {
+    width: 300px;
+    height: 70px;
+    font-size: 2em;
+    padding: 15px;
+    border: none;
+    border-bottom: 3px solid #1E6B2A;
+    background: $green;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.14);
+    &:hover {
+        background: $greenHover;
+        color: antiquewhite;
+        border-bottom-width: 5px;
+        cursor: pointer;
+    }
+}
+
+.btn-answer {
+    margin-top: 5px;
+    display: inline-block;
+    width: 140px;
+    height: 50px;
+    font-size: 1em;
+}
+
+#game {
+    p {
+        span {
+            display: inline-block;
+            font-weight: 100;
+            margin:0;
+            padding:2px;
+            text-transform: none;
+            .answer {
+                font-weight:600;
+                text-transform: uppercase;
+            }
+        }
+    }
+    span {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 10px;
+    }
+    input {
+        height: 2em;
+    }
+}
+#name {
+     background: #3A3A3A;
+        border: none;
+        border-bottom: 1px solid $green;
+        color: $secondColor;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom:25px;
+        &:focus {
+            outline: 0;
+        }
+}
+
+#right-game,
+#left-game {
+    padding: 5px;
+    width: 300px;
+    float: left;
+    &:after, &:before {
+        display:table;
+        content: " ";
+    }
+    input {
+        background: #3A3A3A;
+        border: none;
+        border-bottom: 1px solid $green;
+        color: $secondColor;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.2em;
+        &:focus {
+            outline: 0;
+        }
+    }
+    h3 {
+        margin-top:-20px;
+        margin-bottom:0;
+    }
+}
+
+#left-game {
+    text-align: left;
+}
+
+.start {
+    text-align:center!important;
+    margin-bottom:60px;
+}
+
+#game:before, #game:after {
+    display:table;
+    content: " ";
+    margin:0 auto;
+    
+}
+
+.game-window {
+    margin:0 auto;
+    border: 1px solid #5A5A5A;
+    border-radius: 5px;
+    padding: 30px;
+    background: #313131;
+    
+    box-shadow:0px 0 3px #000;
+    &:after, &:before {
+        display:table;
+        content: " ";
+        clear:both;
+    }
+    
+}
+
+.signature {
+    font-size: 0.8em;
+    margin-top: 25px;
+}
+
+img {
+    height: 25px;
+    float:left;
+    display: block;
+    padding:0px;
+    margin: 0 3px;
+}
+
+span.score {
+    background:#232323;
+    margin:5px;
+    border:1px solid #4E4E4E;
+}
+
+@media screen and (max-width: 632px) {
+    .game-window {
+       text-align:center;
+        margin:5px;
+    }
+}
